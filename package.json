@@ -1,0 +1,20 @@
+{
+  "name": "generator-sitecore-flynn",
+  "version": "1.0.0",
+  "description": "Anastasiya Flynn's Sitecore Solution Generator",
+  "license": "UNLICENSED",
+  "private": true,
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "sitecore",
+    "helix"
+  ],
+  "dependencies": {
+    "gulp-rename": "1.2.2",
+    "uuid": "^3.3.2",
+    "yeoman-generator": "^1.0.0"
+  }
+}
