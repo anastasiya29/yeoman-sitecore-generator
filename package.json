@@ -1,9 +1,10 @@
 {
   "name": "generator-sitecore-flynn",
   "version": "1.0.0",
-  "description": "Anastasiya Flynn's Sitecore Solution Generator",
+  "description": "Yeoman generator for Sitecore Visual Studio Solutions",
+  "homepage": "https://github.com/anastasiya29/yeoman-sitecore-generator#readme",
+  "author": "Anastasiya Flynn",
   "license": "MIT",
-  "private": true,
   "files": [
     "generators"
   ],
