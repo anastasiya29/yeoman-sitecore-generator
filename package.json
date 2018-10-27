@@ -2,7 +2,7 @@
   "name": "generator-sitecore-flynn",
   "version": "1.0.0",
   "description": "Anastasiya Flynn's Sitecore Solution Generator",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "private": true,
   "files": [
     "generators"
