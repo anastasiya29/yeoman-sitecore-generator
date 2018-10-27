@@ -22,7 +22,7 @@ function writeTemplates(src, dist) {
 
 function writeConfigFiles() {
     // Any file that only has an extension needs to be copied explicitly
-    this.fs.copyTpl(this.templatePath(".gitignore"), this.destinationPath(".gitignore"), this.settings);
+    this.fs.copyTpl(this.templatePath(".gitignoretemp"), this.destinationPath(".gitignore"), this.settings);
     this.fs.copyTpl(this.templatePath(".gitattributes"), this.destinationPath(".gitattributes"));
     this.fs.copyTpl(this.templatePath(".babelrc"), this.destinationPath(".babelrc"));
     this.fs.copyTpl(this.templatePath("./src/.editorconfig"), this.destinationPath("./src/.editorconfig"));
