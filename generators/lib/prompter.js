@@ -5,8 +5,10 @@
  * solutionNamespace (optional, string) - The base .NET namespace for C# projects and classes. Ex. "Arke.Sitecore.Project"
  * areaName (optional, string) - The base for the MVC area name. Ex. "ArkeProject"
  * author (required, string) - Ex. "Anastasiya Flynn"
- * frontEndAssetPath (string) - The path to front-end assets directory relative to src/Project/ArkeBase.Web Ex. "/Assets"
- * localUrl (string) - The domain of the local Sitecore instance. Ex. "arke.local"
+ * frontEndAssetPath (string) - The path to front-end assets directory relative to src/Project/YoBase.Web Ex. "/Assets"
+ * localUrl (string) - The domain of the local Sitecore instance. Ex. "arke.local".
+ *                     The generator assumes Sitecore instances are in C:\inetpub\wwwroot\<localUrl>\Website.
+ *                     To change this, update TdsGlobal.config after running the generator.
  * sitecoreVersion (select list) - Ex. "9.0 rev. 171219 (9.0 Update-1)"
  * framework (select list) - Ex. ".NET 4.6.2"
  */
@@ -59,17 +61,23 @@ function getSolutionInfo() {
 }
 
 function getFrameworkInfo() {
+    // The options for the target framework of the VS Solution is based on the compatibility table https://kb.sitecore.net/articles/087164
+    // The value of the frameworkSitecore variable is based on the actual target framework of the Sitecore NuGet packages.
     const choices = [];
+    let frameworkSitecore = null;
+
     switch (this.settings.sitecoreVersion) {
         case "8.2.171121":
         case "8.2.180406":
             choices.push({ name: ".NET 4.6.1", value: "4.6.1" });
             choices.push({ name: ".NET 4.6", value: "4.6" });
             choices.push({ name: ".NET 4.5.2", value: "4.5.2" });
+            frameworkSitecore = "net452";
             break;
         case "9.0.171219":
             choices.push({ name: ".NET 4.7", value: "4.7" });
             choices.push({ name: ".NET 4.6.2", value: "4.6.2" } );
+            frameworkSitecore = "net462";
             break;
     };
     return this.prompt([{
@@ -81,7 +89,9 @@ function getFrameworkInfo() {
         store: true
     }]).then((answers) => {
         this.settings.framework = "v" + answers.framework;
-        this.settings.frameworkShorthand = "net" + this.settings.framework.replace(/\./g, "");
+        this.settings.frameworkShorthand = "net" + answers.framework.replace(/\./g, "");
+        this.settings.frameworkMajor = "net" + answers.framework.substring(0, 3).replace(/\./g, "");
+        this.settings.frameworkSitecore = frameworkSitecore;
     });
 }
 
@@ -89,7 +99,7 @@ function getFrameworkInfo() {
  * filename (string) - Ex. "myfile" (don't include the .js)
  * solutionNamespace (optional, string) - The base .NET namespace for C# projects and classes. Ex. "Arke.Sitecore.Project"
  * areaName (optional, string) - The base for the MVC area name. Ex. "ArkeProject"
- * frontEndAssetPath (string) - The path to front-end assets directory relative to src/Project/ArkeBase.Web Ex. "/Assets"
+ * frontEndAssetPath (string) - The path to front-end assets directory relative to src/Project/YoBase.Web Ex. "/Assets"
  * localUrl (string) - The domain of the local Sitecore instance. Ex. "arke.local"
  * sitecoreVersion (select list) - Ex. "9.0 rev. 171219 (9.0 Update-1)"
  * framework (select list) - Ex. ".NET 4.6.2"

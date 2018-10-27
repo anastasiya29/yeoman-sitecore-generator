@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TDSAnalysis>
+  <Rules>
+    <Rule validator="HedgehogDevelopment.SitecoreProject.Analysis.TemplateStructure, HedgehogDevelopment.SitecoreProject.Analysis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" severity="Warn">
+      <ValidatorSettings>
+        <Properties />
+        <Settings />
+      </ValidatorSettings>
+    </Rule>
+    <Rule validator="HedgehogDevelopment.SitecoreProject.Analysis.ShouldBeDeployOnce, HedgehogDevelopment.SitecoreProject.Analysis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" severity="Error">
+      <ValidatorSettings>
+        <Properties>
+          <add>/sitecore/content</add>
+          <add>/sitecore/layout/Controllers</add>
+          <add>/sitecore/layout/Devices</add>
+          <add>/sitecore/layout/Layouts</add>
+          <add>/sitecore/layout/Models</add>
+          <add>/sitecore/layout/Placeholder Settings</add>
+          <add>/sitecore/layout/Renderings</add>
+          <add>/sitecore/layout/Simulators</add>
+          <add>/sitecore/layout/Sublayouts</add>
+          <add>/sitecore/layout</add>
+          <add>/sitecore/media library/Files</add>
+          <add>/sitecore/media library/Images</add>
+          <add>/sitecore/media library/System</add>
+          <add>/sitecore/media library</add>
+          <add>/sitecore/system/Aliases</add>
+          <add>/sitecore/system/Dictionary</add>
+          <add>/sitecore/system/Languages</add>
+          <add>/sitecore/system/Marketing Center</add>
+          <add>/sitecore/system/Modules</add>
+          <add>/sitecore/system/Proxies</add>
+          <add>/sitecore/system/Publishing targets</add>
+          <add>/sitecore/system/Settings</add>
+          <add>/sitecore/system/Tasks</add>
+          <add>/sitecore/system/Toolbox</add>
+          <add>/sitecore/system/Workflows</add>
+          <add>/sitecore/system</add>
+          <add>/sitecore/templates/Branches/System</add>
+          <add>/sitecore/templates/Branches</add>
+          <add>/sitecore/templates/System</add>
+          <add>/sitecore/templates</add>
+        </Properties>
+        <Settings />
+      </ValidatorSettings>
+    </Rule>
+    <Rule validator="HedgehogDevelopment.SitecoreProject.Analysis.DontSyncChildren, HedgehogDevelopment.SitecoreProject.Analysis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" severity="Warn">
+      <ValidatorSettings>
+        <Properties>
+          <add>/sitecore/system</add>
+          <add>/sitecore/media library/System</add>
+          <add>/sitecore/layout/Layouts/System</add>
+          <add>/sitecore/layout/Renderings/System</add>
+          <add>/sitecore/layout/Simulators</add>
+          <add>/sitecore/templates/System</add>
+          <add>/sitecore/templates/Branches/System</add>
+        </Properties>
+        <Settings />
+      </ValidatorSettings>
+    </Rule>
+    <Rule validator="HedgehogDevelopment.SitecoreProject.Analysis.EnsureParent, HedgehogDevelopment.SitecoreProject.Analysis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" severity="Error">
+      <ValidatorSettings>
+        <Properties />
+        <Settings />
+      </ValidatorSettings>
+    </Rule>
+    <Rule validator="HedgehogDevelopment.SitecoreProject.Analysis.ShouldUseUserFile, HedgehogDevelopment.SitecoreProject.Analysis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" severity="Warn">
+      <ValidatorSettings>
+        <Properties />
+        <Settings />
+      </ValidatorSettings>
+    </Rule>
+    <Rule validator="HedgehogDevelopment.SitecoreProject.Analysis.PreventItemByPath, HedgehogDevelopment.SitecoreProject.Analysis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" severity="Error">
+      <ValidatorSettings>
+        <Properties />
+        <Settings />
+      </ValidatorSettings>
+    </Rule>
+    <Rule validator="HedgehogDevelopment.SitecoreProject.Analysis.DeploymentOptionsValidator, HedgehogDevelopment.SitecoreProject.Analysis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" severity="Warn">
+      <ValidatorSettings>
+        <Properties />
+        <Settings />
+      </ValidatorSettings>
+    </Rule>
+    <Rule validator="HedgehogDevelopment.SitecoreProject.Analysis.ZeroLengthFinalRendering, HedgehogDevelopment.SitecoreProject.Analysis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" severity="Warn">
+      <ValidatorSettings>
+        <Properties />
+        <Settings />
+      </ValidatorSettings>
+    </Rule>
+    <Rule validator="HedgehogDevelopment.SitecoreProject.Analysis.StandardValuesNotDeployOnce, HedgehogDevelopment.SitecoreProject.Analysis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" severity="Error">
+      <ValidatorSettings>
+        <Properties />
+        <Settings />
+      </ValidatorSettings>
+    </Rule>
+    <Rule validator="HedgehogDevelopment.SitecoreProject.Analysis.PreventIllegalCharacters, HedgehogDevelopment.SitecoreProject.Analysis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" severity="Error">
+      <ValidatorSettings>
+        <Properties>
+          <add>0x03</add>
+        </Properties>
+        <Settings />
+      </ValidatorSettings>
+    </Rule>
+    <Rule validator="HedgehogDevelopment.SitecoreProject.Analysis.ShouldBeDeployOnceWithChildren, HedgehogDevelopment.SitecoreProject.Analysis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" severity="Warn">
+      <ValidatorSettings>
+        <Properties>
+          <add>/sitecore/content</add>
+          <add>/sitecore/media library</add>
+        </Properties>
+        <Settings />
+      </ValidatorSettings>
+    </Rule>
+  </Rules>
+</TDSAnalysis>

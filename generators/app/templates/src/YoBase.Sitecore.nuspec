@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id><%= solutionNamespace %>.Sitecore</id>
+		<version>$version$</version>
+		<description><%= solutionName %></description>
+		<authors><%= author %></authors>
+		<projectUrl>https://replacewithurl.com</projectUrl>
+	</metadata>
+	<files>
+
+		<!-- Include the Sitecore CM update package. -->
+		<file
+			src="Project\<%= solutionNamespace %>.CM\bin\Package_Release-CM\*.update"
+			target="content\sitecore\admin\Packages" />
+
+		<!-- Include the Sitecore CD update package. -->
+		<file
+			src="Project\<%= solutionNamespace %>.CD\bin\Package_Release-CD\*.files.update"
+			target="content\sitecore\admin\Packages" />
+
+	</files>
+</package>

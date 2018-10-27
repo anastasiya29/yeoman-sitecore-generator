@@ -1,0 +1,184 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Solution Items", "0.Solution Items", "{DD490B96-8928-4003-A1F2-043AEF206BBD}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitattributes = ..\.gitattributes
+		..\.gitignore = ..\.gitignore
+		..\gulpfile.babel.js = ..\gulpfile.babel.js
+		..\package.json = ..\package.json
+		TdsGlobal.config = TdsGlobal.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Package Bundles", "4.Package Bundles", "{0E409E21-8072-48A6-B8D5-BD6996EC400B}"
+	ProjectSection(SolutionItems) = preProject
+		<%= solutionNamespace %>.Sitecore.nuspec = <%= solutionNamespace %>.Sitecore.nuspec
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Project", "3.Project", "{5E54C613-0C48-4CA9-B8EB-F5A5A46E5ED0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Feature", "2.Feature", "{361217F0-4B49-42AD-8441-CDB59C2272DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Foundation", "1.Foundation", "{A96BCBCF-B7B0-4E98-9E96-94500B246A71}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kernel", "Kernel", "{9751C44D-89C8-4E12-930E-6278F4546E05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "<%= solutionNamespace %>.Foundation.Kernel", "Foundation\<%= solutionNamespace %>.Foundation.Kernel\<%= solutionNamespace %>.Foundation.Kernel.csproj", "{<%= foundationGuid %>}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "<%= solutionNamespace %>.Foundation.Kernel.Core.TDS", "Foundation\<%= solutionNamespace %>.Foundation.Kernel.Core.TDS\<%= solutionNamespace %>.Foundation.Kernel.Core.TDS.scproj", "{<%= foundationTDSCoreGuid %>}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "<%= solutionNamespace %>.Foundation.Kernel.Master.TDS", "Foundation\<%= solutionNamespace %>.Foundation.Kernel.Master.TDS\<%= solutionNamespace %>.Foundation.Kernel.Master.TDS.scproj", "{<%= foundationTDSMasterGuid %>}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "<%= solutionNamespace %>", "<%= solutionNamespace %>", "{DE019D7A-A2F6-4C78-8916-A7E67751E13E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "<%= solutionNamespace %>.Web", "Project\<%= solutionNamespace %>.Web\<%= solutionNamespace %>.Web.csproj", "{<%= projectGuid %>}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "<%= solutionNamespace %>.Web.Core.TDS", "Project\<%= solutionNamespace %>.Web.Core.TDS\<%= solutionNamespace %>.Web.Core.TDS.scproj", "{<%= projectTDSCoreGuid %>}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "<%= solutionNamespace %>.Web.Master.TDS", "Project\<%= solutionNamespace %>.Web.Master.TDS\<%= solutionNamespace %>.Web.Master.TDS.scproj", "{<%= projectTDSMasterGuid %>}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "<%= solutionNamespace %>.Web.UnitTest", "Project\<%= solutionNamespace %>.Web.UnitTest\<%= solutionNamespace %>.Web.UnitTest.csproj", "{<%= projectUnitTestGuid %>}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "<%= solutionNamespace %>.CD", "Project\<%= solutionNamespace %>.CD\<%= solutionNamespace %>.CD.scproj", "{<%= cdBundleGuid %>}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "<%= solutionNamespace %>.CM", "Project\<%= solutionNamespace %>.CM\<%= solutionNamespace %>.CM.scproj", "{<%= cmBundleGuid %>}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature.Common", "Feature.Common", "{94547C84-1105-47B7-A5F9-4B6B5C4E54CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "<%= solutionNamespace %>.Feature.Common", "Feature\<%= solutionNamespace %>.Feature.Common\<%= solutionNamespace %>.Feature.Common.csproj", "{<%= featureGuid %>}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "<%= solutionNamespace %>.Feature.Common.Master.TDS", "Feature\<%= solutionNamespace %>.Feature.Common.Master.TDS\<%= solutionNamespace %>.Feature.Common.Master.TDS.scproj", "{<%= featureTDSMasterGuid %>}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "<%= solutionNamespace %>.Feature.Common.Core.TDS", "Feature\<%= solutionNamespace %>.Feature.Common.Core.TDS\<%= solutionNamespace %>.Feature.Common.Core.TDS.scproj", "{<%= featureTDSCoreGuid %>}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "<%= solutionNamespace %>.Feature.Common.UnitTest", "Feature\<%= solutionNamespace %>.Feature.Common.UnitTest\<%= solutionNamespace %>.Feature.Common.UnitTest.csproj", "{<%= featureUnitTestGuid %>}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code Analysis Configuration", "Code Analysis Configuration", "{1BB72AD3-5589-443C-B90F-4E7C6818C9C3}"
+	ProjectSection(SolutionItems) = preProject
+		<%= solutionNamespace %>.sln.DotSettings = <%= solutionNamespace %>.sln.DotSettings
+		CodeAnalysis.ruleset = CodeAnalysis.ruleset
+		CustomDictionary.xml = CustomDictionary.xml
+		TdsValidations.xml = TdsValidations.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gulp", "gulp", "{6799589B-F783-4972-BD48-0EDF6143C4DB}"
+	ProjectSection(SolutionItems) = preProject
+		..\gulp\nuget.js = ..\gulp\nuget.js
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release-CD|Any CPU = Release-CD|Any CPU
+		Release-CM|Any CPU = Release-CM|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{<%= foundationGuid %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= foundationGuid %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= foundationGuid %>}.Release-CD|Any CPU.ActiveCfg = Release-CD|Any CPU
+		{<%= foundationGuid %>}.Release-CD|Any CPU.Build.0 = Release-CD|Any CPU
+		{<%= foundationGuid %>}.Release-CM|Any CPU.ActiveCfg = Release-CM|Any CPU
+		{<%= foundationGuid %>}.Release-CM|Any CPU.Build.0 = Release-CM|Any CPU
+		{<%= foundationTDSCoreGuid %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= foundationTDSCoreGuid %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= foundationTDSCoreGuid %>}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{<%= foundationTDSCoreGuid %>}.Release-CD|Any CPU.ActiveCfg = Release-CD|Any CPU
+		{<%= foundationTDSCoreGuid %>}.Release-CD|Any CPU.Build.0 = Release-CD|Any CPU
+		{<%= foundationTDSCoreGuid %>}.Release-CM|Any CPU.ActiveCfg = Release-CM|Any CPU
+		{<%= foundationTDSCoreGuid %>}.Release-CM|Any CPU.Build.0 = Release-CM|Any CPU
+		{<%= foundationTDSMasterGuid %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= foundationTDSMasterGuid %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= foundationTDSMasterGuid %>}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{<%= foundationTDSMasterGuid %>}.Release-CD|Any CPU.ActiveCfg = Release-CD|Any CPU
+		{<%= foundationTDSMasterGuid %>}.Release-CD|Any CPU.Build.0 = Release-CD|Any CPU
+		{<%= foundationTDSMasterGuid %>}.Release-CM|Any CPU.ActiveCfg = Release-CM|Any CPU
+		{<%= foundationTDSMasterGuid %>}.Release-CM|Any CPU.Build.0 = Release-CM|Any CPU
+		{<%= projectGuid %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= projectGuid %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= projectGuid %>}.Release-CD|Any CPU.ActiveCfg = Release-CD|Any CPU
+		{<%= projectGuid %>}.Release-CD|Any CPU.Build.0 = Release-CD|Any CPU
+		{<%= projectGuid %>}.Release-CM|Any CPU.ActiveCfg = Release-CM|Any CPU
+		{<%= projectGuid %>}.Release-CM|Any CPU.Build.0 = Release-CM|Any CPU
+		{<%= projectTDSCoreGuid %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= projectTDSCoreGuid %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= projectTDSCoreGuid %>}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{<%= projectTDSCoreGuid %>}.Release-CD|Any CPU.ActiveCfg = Release-CD|Any CPU
+		{<%= projectTDSCoreGuid %>}.Release-CD|Any CPU.Build.0 = Release-CD|Any CPU
+		{<%= projectTDSCoreGuid %>}.Release-CM|Any CPU.ActiveCfg = Release-CM|Any CPU
+		{<%= projectTDSCoreGuid %>}.Release-CM|Any CPU.Build.0 = Release-CM|Any CPU
+		{<%= projectTDSMasterGuid %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= projectTDSMasterGuid %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= projectTDSMasterGuid %>}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{<%= projectTDSMasterGuid %>}.Release-CD|Any CPU.ActiveCfg = Release-CD|Any CPU
+		{<%= projectTDSMasterGuid %>}.Release-CD|Any CPU.Build.0 = Release-CD|Any CPU
+		{<%= projectTDSMasterGuid %>}.Release-CM|Any CPU.ActiveCfg = Release-CM|Any CPU
+		{<%= projectTDSMasterGuid %>}.Release-CM|Any CPU.Build.0 = Release-CM|Any CPU
+		{<%= featureGuid %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= featureGuid %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= featureGuid %>}.Release-CD|Any CPU.ActiveCfg = Release-CD|Any CPU
+		{<%= featureGuid %>}.Release-CD|Any CPU.Build.0 = Release-CD|Any CPU
+		{<%= featureGuid %>}.Release-CM|Any CPU.ActiveCfg = Release-CM|Any CPU
+		{<%= featureGuid %>}.Release-CM|Any CPU.Build.0 = Release-CM|Any CPU
+		{<%= featureTDSCoreGuid %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= featureTDSCoreGuid %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= featureTDSCoreGuid %>}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{<%= featureTDSCoreGuid %>}.Release-CD|Any CPU.ActiveCfg = Release-CD|Any CPU
+		{<%= featureTDSCoreGuid %>}.Release-CD|Any CPU.Build.0 = Release-CD|Any CPU
+		{<%= featureTDSCoreGuid %>}.Release-CM|Any CPU.ActiveCfg = Release-CM|Any CPU
+		{<%= featureTDSCoreGuid %>}.Release-CM|Any CPU.Build.0 = Release-CM|Any CPU
+		{<%= projectUnitTestGuid %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= projectUnitTestGuid %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= projectUnitTestGuid %>}.Release-CD|Any CPU.ActiveCfg = Release-CD|Any CPU
+		{<%= projectUnitTestGuid %>}.Release-CD|Any CPU.Build.0 = Release-CD|Any CPU
+		{<%= projectUnitTestGuid %>}.Release-CM|Any CPU.ActiveCfg = Release-CM|Any CPU
+		{<%= projectUnitTestGuid %>}.Release-CM|Any CPU.Build.0 = Release-CM|Any CPU
+		{<%= featureUnitTestGuid %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= featureUnitTestGuid %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= featureUnitTestGuid %>}.Release-CD|Any CPU.ActiveCfg = Release-CD|Any CPU
+		{<%= featureUnitTestGuid %>}.Release-CD|Any CPU.Build.0 = Release-CD|Any CPU
+		{<%= featureUnitTestGuid %>}.Release-CM|Any CPU.ActiveCfg = Release-CM|Any CPU
+		{<%= featureUnitTestGuid %>}.Release-CM|Any CPU.Build.0 = Release-CM|Any CPU
+		{<%= cdBundleGuid %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= cdBundleGuid %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= cdBundleGuid %>}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{<%= cdBundleGuid %>}.Release-CD|Any CPU.ActiveCfg = Release-CD|Any CPU
+		{<%= cdBundleGuid %>}.Release-CD|Any CPU.Build.0 = Release-CD|Any CPU
+		{<%= cdBundleGuid %>}.Release-CM|Any CPU.ActiveCfg = Release-CM|Any CPU
+		{<%= cdBundleGuid %>}.Release-CM|Any CPU.Build.0 = Release-CM|Any CPU
+		{<%= cmBundleGuid %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= cmBundleGuid %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= cmBundleGuid %>}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{<%= cmBundleGuid %>}.Release-CD|Any CPU.ActiveCfg = Release-CD|Any CPU
+		{<%= cmBundleGuid %>}.Release-CD|Any CPU.Build.0 = Release-CD|Any CPU
+		{<%= cmBundleGuid %>}.Release-CM|Any CPU.ActiveCfg = Release-CM|Any CPU
+		{<%= cmBundleGuid %>}.Release-CM|Any CPU.Build.0 = Release-CM|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9751C44D-89C8-4E12-930E-6278F4546E05} = {A96BCBCF-B7B0-4E98-9E96-94500B246A71}
+		{<%= foundationGuid %>} = {9751C44D-89C8-4E12-930E-6278F4546E05}
+		{<%= foundationTDSCoreGuid %>} = {9751C44D-89C8-4E12-930E-6278F4546E05}
+		{<%= foundationTDSMasterGuid %>} = {9751C44D-89C8-4E12-930E-6278F4546E05}
+		{DE019D7A-A2F6-4C78-8916-A7E67751E13E} = {5E54C613-0C48-4CA9-B8EB-F5A5A46E5ED0}
+		{<%= projectGuid %>} = {DE019D7A-A2F6-4C78-8916-A7E67751E13E}
+		{<%= projectTDSCoreGuid %>} = {DE019D7A-A2F6-4C78-8916-A7E67751E13E}
+		{<%= projectTDSMasterGuid %>} = {DE019D7A-A2F6-4C78-8916-A7E67751E13E}
+		{94547C84-1105-47B7-A5F9-4B6B5C4E54CD} = {361217F0-4B49-42AD-8441-CDB59C2272DD}
+		{<%= featureGuid %>} = {94547C84-1105-47B7-A5F9-4B6B5C4E54CD}
+		{<%= featureTDSCoreGuid %>} = {94547C84-1105-47B7-A5F9-4B6B5C4E54CD}
+		{<%= featureTDSMasterGuid %>} = {94547C84-1105-47B7-A5F9-4B6B5C4E54CD}
+		{<%= projectUnitTestGuid %>} = {DE019D7A-A2F6-4C78-8916-A7E67751E13E}
+		{1BB72AD3-5589-443C-B90F-4E7C6818C9C3} = {DD490B96-8928-4003-A1F2-043AEF206BBD}
+		{<%= featureUnitTestGuid %>} = {94547C84-1105-47B7-A5F9-4B6B5C4E54CD}
+		{<%= cdBundleGuid %>} = {0E409E21-8072-48A6-B8D5-BD6996EC400B}
+		{<%= cmBundleGuid %>} = {0E409E21-8072-48A6-B8D5-BD6996EC400B}
+		{6799589B-F783-4972-BD48-0EDF6143C4DB} = {DD490B96-8928-4003-A1F2-043AEF206BBD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D524DC52-B3D7-450B-9AAB-0A59C7F40459}
+	EndGlobalSection
+EndGlobal

@@ -14,8 +14,8 @@ module.exports = class extends Generator {
         // time the generator runs
         this.settings = {};
 
-        // Escape single backslask with double-backslash for usage in strings
-        this.settings.solutionRoot = this.destinationPath().replace(/\\/g, "\\");
+        // Escape single backslash with double-backslash for usage in strings
+        this.settings.solutionRoot = this.destinationPath().replace(/\\/g, "\\\\") + "\\\\src";
     }
 
     async prompting() {
@@ -35,6 +35,8 @@ module.exports = class extends Generator {
         // Copy Helix layers to destination, dynamically transforming files based on
         // project-specific settings as needed
         writer.writeTemplates.call(this);
+
+        writer.writeRawFiles.call(this);
     }
 
     install() {

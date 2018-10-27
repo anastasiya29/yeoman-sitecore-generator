@@ -1,4 +1,2 @@
 node_modules/
-generators/**/templates/*
-generators/add-typescript/Assets/*
-generators/add-bootstrap/Assets/*
+generators/add-typescript/*

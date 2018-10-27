@@ -1,0 +1,62 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid><%= foundationTDSMasterGuid %></ProjectGuid>
+    <TargetFrameworkVersion><%= framework %></TargetFrameworkVersion>
+    <EnableUpdateable>true</EnableUpdateable>
+    <UseMerge>true</UseMerge>
+    <SingleAssemblyName><%= solutionNamespace %>.Foundation.Kernel.Master.TDS</SingleAssemblyName>
+    <UseWebConfigReplacement>false</UseWebConfigReplacement>
+    <DeleteAppCodeCompiledFiles>true</DeleteAppCodeCompiledFiles>
+    <LegacyFileReplacement>false</LegacyFileReplacement>
+    <AssemblyName><%= solutionNamespace %>.Foundation.Kernel.Master.TDS</AssemblyName>
+    <Name><%= solutionNamespace %>.Foundation.Kernel.Master.TDS</Name>
+    <RootNamespace><%= solutionNamespace %>.Foundation.Kernel.Master.TDS</RootNamespace>
+    <ManageRoles>True</ManageRoles>
+    <SitecoreDatabase>master</SitecoreDatabase>
+    <AssemblyStatus>Exclude</AssemblyStatus>
+    <SourceWebVirtualPath>/<%= solutionNamespace %>.Foundation.Kernel.csproj</SourceWebVirtualPath>
+    <SourceWebProject>{<%= foundationGuid %>}|Foundation\<%= solutionNamespace %>.Foundation.Kernel\<%= solutionNamespace %>.Foundation.Kernel.csproj</SourceWebProject>
+    <SourceWebPhysicalPath>..\<%= solutionNamespace %>.Foundation.Kernel</SourceWebPhysicalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+    <EnableValidations>True</EnableValidations>
+    <ValidationSettingsFilePath>..\..\TdsValidations.xml</ValidationSettingsFilePath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release-CD' ">
+    <OutputPath>.\bin\Release-CD\</OutputPath>
+    <DisableFileDeployment>False</DisableFileDeployment>
+    <LightningDeployMode>False</LightningDeployMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release-CM' ">
+    <OutputPath>.\bin\Release-CM\</OutputPath>
+    <DisableFileDeployment>False</DisableFileDeployment>
+    <LightningDeployMode>False</LightningDeployMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttributes Include="AssemblyFileVersion">
+      <Value>$(AssemblyFileVersion)</Value>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="AssemblyVersion">
+      <Value>$(AssemblyVersion)</Value>
+    </AssemblyAttributes>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\source\<%= solutionNamespace %>.Foundation.Kernel\<%= solutionNamespace %>.Foundation.Kernel.csproj">
+      <Project>{<%= foundationGuid %>}</Project>
+      <Name><%= solutionNamespace %>.Foundation.Kernel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
+</Project>

@@ -1,0 +1,102 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid><%= cmBundleGuid %></ProjectGuid>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <EnableUpdateable>true</EnableUpdateable>
+    <UseMerge>true</UseMerge>
+    <SingleAssemblyName><%= solutionNamespace %>.CM</SingleAssemblyName>
+    <UseWebConfigReplacement>false</UseWebConfigReplacement>
+    <DeleteAppCodeCompiledFiles>true</DeleteAppCodeCompiledFiles>
+    <LegacyFileReplacement>false</LegacyFileReplacement>
+    <AssemblyName><%= solutionNamespace %>.CM</AssemblyName>
+    <Name><%= solutionNamespace %>.CM</Name>
+    <RootNamespace><%= solutionNamespace %>.CM</RootNamespace>
+    <ManageRoles>True</ManageRoles>
+    <SitecoreDatabase>master</SitecoreDatabase>
+    <AssemblyStatus>Exclude</AssemblyStatus>
+    <EnableAssemblyValidation>True</EnableAssemblyValidation>
+    <EnablePackageValidation>False</EnablePackageValidation>
+    <AssembliesExcludedFromValidation><%= solutionNamespace %>.*.dll</AssembliesExcludedFromValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release-CM' ">
+    <OutputPath>.\bin\Release-CM\</OutputPath>
+    <DisableFileDeployment>False</DisableFileDeployment>
+    <LightningDeployMode>False</LightningDeployMode>
+    <PackageName><%= solutionNamespace %>.CM</PackageName>
+    <PackageAuthor><%= solutionNamespace %></PackageAuthor>
+    <PackagePublisher><%= solutionNamespace %></PackagePublisher>
+    <PackageVersion>1.0.0.0</PackageVersion>
+    <PackageReadme />
+    <SitecoreAssemblyPath />
+    <GeneratePackage>True</GeneratePackage>
+    <SeperateFilesAndItems>False</SeperateFilesAndItems>
+    <PackageExcludeCode>False</PackageExcludeCode>
+    <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release-CD' ">
+    <OutputPath>.\bin\Release-CD\</OutputPath>
+    <DisableFileDeployment>False</DisableFileDeployment>
+    <LightningDeployMode>False</LightningDeployMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttributes Include="AssemblyFileVersion">
+      <Value>$(AssemblyFileVersion)</Value>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="AssemblyVersion">
+      <Value>$(AssemblyVersion)</Value>
+    </AssemblyAttributes>
+  </ItemGroup>
+  <ItemGroup>
+    <BundledProject Include="..\..\Feature\<%= solutionNamespace %>.Feature.Common.Core.TDS\<%= solutionNamespace %>.Feature.Common.Core.TDS.scproj">
+      <ProjectId>{<%= featureTDSCoreGuid %>}</ProjectId>
+    </BundledProject>
+    <BundledProject Include="..\..\Feature\<%= solutionNamespace %>.Feature.Common.Master.TDS\<%= solutionNamespace %>.Feature.Common.Master.TDS.scproj">
+      <ProjectId>{<%= featureTDSMasterGuid %>}</ProjectId>
+    </BundledProject>
+    <BundledProject Include="..\..\Foundation\<%= solutionNamespace %>.Foundation.Kernel.Core.TDS\<%= solutionNamespace %>.Foundation.Kernel.Core.TDS.scproj">
+      <ProjectId>{<%= foundationTDSCoreGuid %>}</ProjectId>
+    </BundledProject>
+    <BundledProject Include="..\..\Foundation\<%= solutionNamespace %>.Foundation.Kernel.Master.TDS\<%= solutionNamespace %>.Foundation.Kernel.Master.TDS.scproj">
+      <ProjectId>{<%= foundationTDSMasterGuid %>}</ProjectId>
+    </BundledProject>
+    <BundledProject Include="..\<%= solutionNamespace %>.Web.Core.TDS\<%= solutionNamespace %>.Web.Core.TDS.scproj">
+      <ProjectId>{<%= projectTDSCoreGuid %>}</ProjectId>
+    </BundledProject>
+    <BundledProject Include="..\<%= solutionNamespace %>.Web.Master.TDS\<%= solutionNamespace %>.Web.Master.TDS.scproj">
+      <ProjectId>{<%= projectTDSMasterGuid %>}</ProjectId>
+    </BundledProject>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\<%= solutionNamespace %>.Feature.Common.TDS\<%= solutionNamespace %>.Feature.Common.TDS.scproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\<%= solutionNamespace %>.Foundation.Kernel.Core.TDS\<%= solutionNamespace %>.Foundation.Kernel.Core.TDS.scproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\<%= solutionNamespace %>.Foundation.Kernel.Master.TDS\<%= solutionNamespace %>.Foundation.Kernel.Master.TDS.scproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\<%= solutionNamespace %>.Web.Core.TDS\<%= solutionNamespace %>.Web.Core.TDS.scproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\<%= solutionNamespace %>.Web.Master.TDS\<%= solutionNamespace %>.Web.Master.TDS.scproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
+</Project>

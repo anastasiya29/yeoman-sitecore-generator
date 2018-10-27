@@ -4,13 +4,11 @@ const rename = require("gulp-rename");
 
 function writeTemplates(src, dist) {
     this.registerTransformStream(rename((path) => {
-        path.basename = path.basename.replace(/ArkeAreaName/g, this.settings.areaName);
-        path.basename = path.basename.replace(/ArkeBase/g, this.settings.solutionNamespace);
-        path.basename = path.basename.replace(/arkebase/g, this.settings.solutionNamespace.toLowerCase());
+        path.basename = path.basename.replace(/YoAreaName/g, this.settings.areaName);
+        path.basename = path.basename.replace(/YoBase/g, this.settings.solutionNamespace);
 
-        path.dirname = path.dirname.replace(/ArkeAreaName/g, this.settings.areaName);
-        path.dirname = path.dirname.replace(/ArkeBase/g, this.settings.solutionNamespace);
-        path.dirname = path.dirname.replace(/arkebase/g, this.settings.solutionNamespace.toLowerCase());
+        path.dirname = path.dirname.replace(/YoAreaName/g, this.settings.areaName);
+        path.dirname = path.dirname.replace(/YoBase/g, this.settings.solutionNamespace);
     }));
 
     const templateData = Object.assign(generateGuids(), this.settings);
@@ -28,6 +26,11 @@ function writeConfigFiles() {
     this.fs.copyTpl(this.templatePath(".gitattributes"), this.destinationPath(".gitattributes"));
     this.fs.copyTpl(this.templatePath(".babelrc"), this.destinationPath(".babelrc"));
     this.fs.copyTpl(this.templatePath("./src/.editorconfig"), this.destinationPath("./src/.editorconfig"));
+}
+
+function writeRawFiles() {
+    // Any files that should skip EJS processing
+    this.fs.copy(this.templatePath("../../lib/nuget.exe"), this.destinationPath("./lib/nuget.exe"));
 }
 
 function generateGuids() {
@@ -50,5 +53,6 @@ function generateGuids() {
 
 module.exports = {
     writeTemplates: writeTemplates,
-    writeConfigFiles: writeConfigFiles
+    writeConfigFiles: writeConfigFiles,
+    writeRawFiles: writeRawFiles
 };
