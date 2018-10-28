@@ -1,12 +1,12 @@
 /*
  * Project settings managed by this prompter:
  * 
- * solutionName (optional, string) - Ex. "Arke Systems Project"
- * solutionNamespace (optional, string) - The base .NET namespace for C# projects and classes. Ex. "Arke.Sitecore.Project"
- * areaName (optional, string) - The base for the MVC area name. Ex. "ArkeProject"
+ * solutionName (optional, string) - Ex. "Demo Systems Project"
+ * solutionNamespace (optional, string) - The base .NET namespace for C# projects and classes. Ex. "Demo.Sitecore.Project"
+ * areaName (optional, string) - The base for the MVC area name. Ex. "DemoArea"
  * author (required, string) - Ex. "Anastasiya Flynn"
  * frontEndAssetPath (string) - The path to front-end assets directory relative to src/Project/YoBase.Web Ex. "/Assets"
- * localUrl (string) - The domain of the local Sitecore instance. Ex. "arke.local".
+ * localUrl (string) - The domain of the local Sitecore instance. Ex. "sc901.local".
  *                     The generator assumes Sitecore instances are in C:\inetpub\wwwroot\<localUrl>\Website.
  *                     To change this, update TdsGlobal.config after running the generator.
  * sitecoreVersion (select list) - Ex. "9.0 rev. 171219 (9.0 Update-1)"
@@ -96,13 +96,8 @@ function getFrameworkInfo() {
 }
 
 /*
- * filename (string) - Ex. "myfile" (don't include the .js)
- * solutionNamespace (optional, string) - The base .NET namespace for C# projects and classes. Ex. "Arke.Sitecore.Project"
- * areaName (optional, string) - The base for the MVC area name. Ex. "ArkeProject"
- * frontEndAssetPath (string) - The path to front-end assets directory relative to src/Project/YoBase.Web Ex. "/Assets"
- * localUrl (string) - The domain of the local Sitecore instance. Ex. "arke.local"
- * sitecoreVersion (select list) - Ex. "9.0 rev. 171219 (9.0 Update-1)"
- * framework (select list) - Ex. ".NET 4.6.2"
+ * filename (string) - Ex. "main" (don't include the .js)
+ * libraryVariable (string) - The variable that will be exported to the global JavaScript namespace by your library - Ex. "LIB"
  */
 function getTypeScriptInfo() {
     return this.prompt([{

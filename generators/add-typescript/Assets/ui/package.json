@@ -1,0 +1,35 @@
+{
+  "name": "<%= filename %>",
+  "version": "1.0.0",
+  "description": "<%= solutionName %>",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start --single-run",
+    "setup": "node setup.js",
+    "build": "yarn install && webpack",
+    "dev": "npm run setup && webpack-dev-server"
+  },
+  "author": "<%= author %>",
+  "devDependencies": {
+    "@types/jasmine": "^2.8.8",
+    "colors": "^1.1.2",
+    "istanbul-instrumenter-loader": "^3.0.0",
+    "jasmine": "^3.2.0",
+    "karma": "^2.0.4",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage-istanbul-reporter": "^2.0.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-spec-reporter": "0.0.32",
+    "karma-webpack": "^3.0.0",
+    "ncp": "^2.0.0",
+    "ts-loader": "^4.4.2",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.3",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4",
+    "yargs": "^12.0.1"
+  },
+  "dependencies": {}
+}

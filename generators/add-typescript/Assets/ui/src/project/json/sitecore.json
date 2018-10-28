@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "First card title",
+        "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "priority": "bg-success"
+    },
+    {
+        "id": 2,
+        "title": "Second card title",
+        "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "priority": "bg-primary"
+    },
+    {
+        "id": 3,
+        "title": "Third card title",
+        "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "priority": "bg-info"
+    },
+    {
+        "id": 4,
+        "title": "Fourth card title",
+        "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "priority": "bg-warning"
+    }
+]
